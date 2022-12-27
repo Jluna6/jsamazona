@@ -1,7 +1,7 @@
-import HomeScreen from './srceens/HomeScreen';
-import ProductScreen from './srceens/ProductScreen';
+import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
 import { parseRequestUrl } from './utils';
-import Error404Screen from './srceens/Error404Screen';
+import Error404Screen from './screens/Error404Screen';
 
 const routes = {
   '/': HomeScreen,

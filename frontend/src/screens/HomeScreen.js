@@ -1,6 +1,7 @@
 import axios from 'axios';
-const HomeScreen = {
+import Rating from '../components/Rating';
 
+const HomeScreen = {
   render: async () => {
     const response = await axios({
       url: 'http://localhost:5000/api/products',
@@ -27,6 +28,12 @@ const HomeScreen = {
           <a href="/#/product/1">
             ${product.name}
           </a>
+        </div>
+        <div class="product-rating">
+          ${Rating.render({
+            value: product.rating,
+            text: `${product.numReviews} reviews`,
+          })}
         </div>
         <div class="product-brand">
           ${product.brand}
